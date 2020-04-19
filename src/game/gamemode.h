@@ -11,7 +11,8 @@ enum
     M_ELIMINATION = 1<<7,
     M_LASTMAN     = 1<<8,
     M_JUGGERNAUT  = 1<<9,
-    M_INFECTION   = 1<<10
+    M_INFECTION   = 1<<10,
+    M_HOLD        = 1<<11
 };
 
 static struct gamemodeinfo
@@ -29,7 +30,8 @@ static struct gamemodeinfo
     { "elim", "Elimination", M_ELIMINATION | M_TEAM, "\f0Elimination\ff: eliminate the enemy team to win the round and score points for your team" },
     { "lms", "Last Man Standing", M_LASTMAN, "\f0Last Man Standing\ff: eliminate everyone to win the round and score points" },
     { "jugg", "Juggernaut", M_JUGGERNAUT, "\f0Juggernaut\ff: kill players or kill the juggernaut to become the new juggernaut and score points easier" },
-    { "infect", "Infection", M_INFECTION, "\f0Infection\ff: survive the infection or infect as many survivors as you can as a zombie to score points" }
+    { "infect", "Infection", M_INFECTION, "\f0Infection\ff: survive the infection or infect as many survivors as you can as a zombie to score points" },
+    { "hold", "Hold", M_HOLD, "Darky was too lazy to add description" }
 };
 
 #define STARTGAMEMODE (-1)
@@ -50,6 +52,7 @@ static struct gamemodeinfo
 #define m_lms             (m_check(gamemode, M_LASTMAN))
 #define m_juggernaut      (m_check(gamemode, M_JUGGERNAUT))
 #define m_infection       (m_check(gamemode, M_INFECTION))
+#define m_hold            (m_check(gamemode, M_HOLD))
 
 #define m_demo            (m_check(gamemode, M_DEMO))
 #define m_edit            (m_check(gamemode, M_EDIT))
