@@ -73,7 +73,7 @@ static struct mutatorinfo
     const char *name, *prettyname;
     int flags, exclude;
     const char *info;
-} mutator[] =
+} mutator[] __attribute__((unused)) =
 {
     { "default", "", MUT_DEFAULT, MUT_ALL, ""},
     { "classic", "Classic", MUT_CLASSIC, MUT_DEFAULT | MUT_INSTA | MUT_EFFIC | MUT_NOITEMS, "\f6Classic\ff: collect items for ammo, shield and health" },
