@@ -4475,8 +4475,8 @@ namespace server
 
     int laninfoport() { return TESSERACT_LANINFO_PORT; }
     int serverport() { return TESSERACT_SERVER_PORT; }
-    const char *defaultmaster() { return "178.62.211.231"; }
-    int masterport() { return TESSERACT_MASTER_PORT; }
+    const char *defaultmaster() { return "cldv.ddns.net"; }
+    int masterport() { return 42003; }
     int numchannels() { return 3; }
 
     #include "extinfo.h"
