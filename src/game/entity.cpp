@@ -72,7 +72,7 @@ namespace entities
         {
             NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
             "item/teleport", NULL, NULL,
-            NULL,
+            NULL, NULL,
 
             "item/ammo/shells", "item/ammo/bullets", "worldgun/pulserifle", "item/ammo/rockets", "item/ammo/rrounds",
             "item/health", "item/shield/yellow", "item/shield/red",
@@ -549,7 +549,7 @@ namespace entities
         {
             "none?", "light", "mapmodel", "playerstart", "envmap", "particles", "sound", "spotlight", "decal",
             "teleport", "teledest", "jumppad",
-            "flag",
+            "flag", "base",
             "sg", "smg", "pulse", "rl", "rail",
             "health", "shield1", "shield2",
             "health_super", "health_mega", "doubledamage", "haste", "armor", "unlimited_ammo", "?", "!", "invulnerability"

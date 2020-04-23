@@ -71,6 +71,7 @@ enum                            // static entity types
     TELEDEST,                   // attr1 = angle, attr2 = idx
     JUMPPAD,                    // attr1 = zpush, attr2 = ypush, attr3 = xpush
     FLAG,                       // attr1 = angle, attr2 = team
+    BASE,
 
     I_AMMO_SG, I_AMMO_SMG, I_AMMO_PULSE, I_AMMO_RL, I_AMMO_RAIL,
     I_HEALTH, I_YELLOWSHIELD, I_REDSHIELD,
