@@ -404,6 +404,7 @@ struct ctfclientmode : clientmode
         drawplayerblip(d, x, y, s, 1.5f);
         loopv(flags)
         {
+            drawblip(d, x, y, s, i, false);
             flag &f = flags[i];
             if(!validteam(f.team)) continue;
             if(f.owner)
@@ -411,7 +412,6 @@ struct ctfclientmode : clientmode
                 if(lastmillis%1000 >= 500) continue;
             }
             else if(f.droptime && (f.droploc.x < 0 || lastmillis%300 >= 150)) continue;
-            drawblip(d, x, y, s, i, false);
             drawblip(d, x, y, s, i, true);
         }
         drawteammates(d, x, y, s);
