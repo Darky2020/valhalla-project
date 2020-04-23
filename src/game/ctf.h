@@ -411,6 +411,7 @@ struct ctfclientmode : clientmode
                 if(lastmillis%1000 >= 500) continue;
             }
             else if(f.droptime && (f.droploc.x < 0 || lastmillis%300 >= 150)) continue;
+            drawblip(d, x, y, s, i, false);
             drawblip(d, x, y, s, i, true);
         }
         drawteammates(d, x, y, s);
