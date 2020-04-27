@@ -960,7 +960,7 @@ namespace game
     }
     ICOMMAND(suicide, "", (), suicide(player1));
 
-    bool needminimap() { return m_ctf; }
+    bool needminimap() { return m_ctf|m_hold; }
 
     void drawicon(int icon, float x, float y, float sz)
     {

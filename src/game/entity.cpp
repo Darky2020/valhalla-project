@@ -72,11 +72,11 @@ namespace entities
         {
             NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
             "item/teleport", NULL, NULL,
-            NULL, NULL,
+            NULL,
 
             "item/ammo/shells", "item/ammo/bullets", "worldgun/pulserifle", "item/ammo/rockets", "item/ammo/rrounds",
             "item/health", "item/shield/yellow", "item/shield/red",
-            "item/health/super", "item/health/mega", "item/ddamage", "item/haste", "item/armor", "item/ammo/item", "", "", "item/ankh"
+            "item/health/super", "item/health/mega", "item/ddamage", "item/haste", "item/armor", "item/ammo/item", "", "", "item/ankh", NULL
         };
         return entmdlnames[type];
     }
@@ -549,10 +549,10 @@ namespace entities
         {
             "none?", "light", "mapmodel", "playerstart", "envmap", "particles", "sound", "spotlight", "decal",
             "teleport", "teledest", "jumppad",
-            "flag", "base",
+            "flag",
             "sg", "smg", "pulse", "rl", "rail",
             "health", "shield1", "shield2",
-            "health_super", "health_mega", "doubledamage", "haste", "armor", "unlimited_ammo", "?", "!", "invulnerability"
+            "health_super", "health_mega", "doubledamage", "haste", "armor", "unlimited_ammo", "?", "!", "invulnerability", "base"
         };
         return i>=0 && size_t(i)<sizeof(entnames)/sizeof(entnames[0]) ? entnames[i] : "";
     }

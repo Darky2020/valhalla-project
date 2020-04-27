@@ -124,15 +124,17 @@ namespace game
 
     #include "ctf.h"
     #include "elimination.h"
-
+    #include "hold.h"
     clientmode *cmode = NULL;
     ctfclientmode ctfmode;
     eliminationclientmode eliminationmode;
+    holdclientmode holdmode;
 
     void setclientmode()
     {
         if(m_ctf) cmode = &ctfmode;
         else if(m_elimination) cmode = &eliminationmode;
+        else if(m_hold) cmode = &holdmode;
         else cmode = NULL;
     }
 
@@ -1428,7 +1430,7 @@ namespace game
             }
 
             default:
-                neterr("type");
+                neterr("type1");
                 return;
         }
     }
@@ -1491,6 +1493,7 @@ namespace game
     void parsemessages(int cn, gameent *d, ucharbuf &p)
     {
         static char text[MAXTRANS];
+
         int type;
         bool mapchanged = false, demopacket = false;
 
@@ -2342,6 +2345,7 @@ namespace game
             #define PARSEMESSAGES 1
             #include "ctf.h"
             #include "elimination.h"
+            #include "hold.h"
             #undef PARSEMESSAGES
 
             case N_NEWMAP:
@@ -2403,7 +2407,7 @@ namespace game
                 break;
 
             default:
-                neterr("type", cn < 0);
+                neterr("type2", cn<0);
                 return;
         }
     }
