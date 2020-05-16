@@ -167,6 +167,7 @@
 		<Unit filename="../game/aiman.h" />
 		<Unit filename="../game/client.cpp" />
 		<Unit filename="../game/ctf.h" />
+		<Unit filename="../game/hold.h" />
 		<Unit filename="../game/elimination.h" />
 		<Unit filename="../game/entity.cpp" />
 		<Unit filename="../game/extinfo.h" />
