@@ -67,7 +67,7 @@ namespace game
 
     void setbliptex(int team, const char *type = "")
     {
-        defformatstring(blipname, "data/interface/radar/blip%s%s.png", teamblipcolor[validteam(team) ? team : 0], type);
+        defformatstring(blipname, "data/interface/radar/blip%s%s.png", (m_hold && type=="_flag" && team==99) ? "_neutral" : (teamblipcolor[validteam(team) ? team : 0]), type);
         settexture(blipname, 3);
     }
 
@@ -125,6 +125,7 @@ namespace game
     #include "ctf.h"
     #include "elimination.h"
     #include "hold.h"
+
     clientmode *cmode = NULL;
     ctfclientmode ctfmode;
     eliminationclientmode eliminationmode;
@@ -1430,7 +1431,7 @@ namespace game
             }
 
             default:
-                neterr("type1");
+                neterr("type");
                 return;
         }
     }
@@ -1493,7 +1494,6 @@ namespace game
     void parsemessages(int cn, gameent *d, ucharbuf &p)
     {
         static char text[MAXTRANS];
-
         int type;
         bool mapchanged = false, demopacket = false;
 
@@ -2407,7 +2407,7 @@ namespace game
                 break;
 
             default:
-                neterr("type2", cn<0);
+                neterr("type", cn < 0);
                 return;
         }
     }
