@@ -76,7 +76,8 @@ namespace entities
 
             "item/ammo/shells", "item/ammo/bullets", "worldgun/pulserifle", "item/ammo/rockets", "item/ammo/rrounds",
             "item/health", "item/shield/yellow", "item/shield/red",
-            "item/health/super", "item/health/mega", "item/ddamage", "item/haste", "item/armor", "item/ammo/item", "", "", "item/ankh", NULL
+            "item/health/super", "item/health/mega", "item/ddamage", "item/haste", "item/armor", "item/ammo/item", "", "", "item/ankh", 
+            NULL,
         };
         return entmdlnames[type];
     }
@@ -552,7 +553,8 @@ namespace entities
             "flag",
             "sg", "smg", "pulse", "rl", "rail",
             "health", "shield1", "shield2",
-            "health_super", "health_mega", "doubledamage", "haste", "armor", "unlimited_ammo", "?", "!", "invulnerability", "base"
+            "health_super", "health_mega", "doubledamage", "haste", "armor", "unlimited_ammo", "?", "!", "invulnerability",
+            "base",
         };
         return i>=0 && size_t(i)<sizeof(entnames)/sizeof(entnames[0]) ? entnames[i] : "";
     }
