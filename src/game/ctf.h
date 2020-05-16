@@ -251,7 +251,7 @@ struct ctfclientmode : clientmode
         returnflag(relay >= 0 ? relay : goal);
         ci->state.flags++;
         int team = ci->team, score = addscore(team, 1);
-        sendf(-1, 1, "rii9", N_SCOREFLAG, ci->clientnum, relay, relay >= 0 ? ++flags[relay].version : -1, goal, ++flags[goal].version, team, score, ci->state.flags);
+        sendf(-1, 1, "ri9", N_SCOREFLAG, ci->clientnum, relay, relay >= 0 ? ++flags[relay].version : -1, goal, ++flags[goal].version, team, score, ci->state.flags);
         if(score >= scorelimit) startintermission();
     }
 
@@ -977,4 +977,3 @@ case N_RESETFLAG:
 }
 
 #endif
-
