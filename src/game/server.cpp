@@ -784,14 +784,15 @@ namespace server
 
     int msgsizelookup(int msg)
     {
+        // conoutf("a%i", msg);
         static int sizetable[NUMMSG] = { -1 };
         if(sizetable[0] < 0)
         {
             memset(sizetable, -1, sizeof(sizetable));
             for(const int *p = msgsizes; *p >= 0; p += 2) sizetable[p[0]] = p[1];
         }
-        return msg >= 0 && msg < NUMMSG ? sizetable[msg] : -1;
 
+        return msg >= 0 && msg < NUMMSG ? sizetable[msg] : -1;
     }
 
     const char *modename(int n, const char *unknown)
@@ -4466,7 +4467,7 @@ namespace server
             default: genericmsg:
             {
                 int size = server::msgsizelookup(type);
-                if(size<=0) { disconnect_client(sender, DISC_MSGERR); return; }
+                if(size<=0) { conoutf("%i ", type); disconnect_client(sender, DISC_MSGERR); return; }
                 loopi(size-1) getint(p);
                 if(ci) switch(msgfilter[type])
                 {
@@ -4480,8 +4481,8 @@ namespace server
 
     int laninfoport() { return TESSERACT_LANINFO_PORT; }
     int serverport() { return TESSERACT_SERVER_PORT; }
-    const char *defaultmaster() { return "cldv.ddns.net"; }
-    int masterport() { return 42003; }
+    const char *defaultmaster() { return "185.247.116.188"; }
+    int masterport() { return 21217; }
     int numchannels() { return 3; }
 
     #include "extinfo.h"
