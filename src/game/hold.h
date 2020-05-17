@@ -301,7 +301,6 @@ struct holdclientmode : clientmode
         returnflag(relay >= 0 ? relay : goal);
         ci->state.flags++;
         int team = ci->team, score = addscore(team, 1);
-        conoutf("%i", score);
         spawnflag(goal);
         sendf(-1, 1, "rii9", N_SCOREFLAG_HOLD, ci->clientnum, relay, relay >= 0 ? ++flags[relay].version : -1, goal, ++flags[goal].version, flags[0].spawnindex, team, score, ci->state.flags);
         if(score >= scorelimit) startintermission();
