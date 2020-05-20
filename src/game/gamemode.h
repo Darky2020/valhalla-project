@@ -31,7 +31,7 @@ static struct gamemodeinfo
     { "lms", "Last Man Standing", M_LASTMAN, "\f0Last Man Standing\ff: eliminate everyone to win the round and score points" },
     { "jugg", "Juggernaut", M_JUGGERNAUT, "\f0Juggernaut\ff: kill players or kill the juggernaut to become the new juggernaut and score points easier" },
     { "infect", "Infection", M_INFECTION, "\f0Infection\ff: survive the infection or infect as many survivors as you can as a zombie to score points" },
-    { "hold", "Hold", M_HOLD | M_TEAM, "Darky was too lazy to add description" }
+    { "hold", "Hold", M_HOLD | M_TEAM, "\f0Team Deathmatch\ff: take and hold flag for 20 seconds to score points for your team." }
 };
 
 #define STARTGAMEMODE (-1)
